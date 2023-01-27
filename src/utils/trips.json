@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Trip 1",
+        "delivery count": "20",
+        "date": "25 September 2022",
+        "status": "Done"
+    },
+    {
+        "name": "Trip 2",
+        "delivery count": "100",
+        "date": "26 September 2022",
+        "status": "Failed"
+    }
+]

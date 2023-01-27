@@ -1,0 +1,92 @@
+.login {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.login > img {
+    width: 45%;
+}
+
+.login .separator {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 35vh;
+    width: 2px;
+    background-color: var(--grey-text-color);
+}
+
+.login form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+    padding: 0 12.5%;
+}
+
+.login form h1 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    color: #5e737a;
+}
+
+.login form input {
+    width: 100%;
+    font-size: 18px;
+    line-height: 22px;
+    outline: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    border: 1px solid var(--grey-color);
+    color: var(--grey-text-color);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.login form input::placeholder {
+    color: var(--grey-text-color);
+}
+
+.login form .error {
+    margin: 0 0 20px;
+    align-self: flex-start;
+    color: var(--red-color);
+    font-size: 15px;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    background-color: var(--red-background-color);
+    width: 100%;
+    padding: 15px 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: 500;
+}
+
+.login form .error.show {
+    opacity: 1;
+}
+
+.login form .error img {
+    margin-right: 10px;
+}
+
+.login form button {
+    padding: 10px 50px;
+    border-radius: 5px;
+    background-color: var(--green-color);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 22px;
+    width: fit-content;
+    align-self: flex-end;
+}

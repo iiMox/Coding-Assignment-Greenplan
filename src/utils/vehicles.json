@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Truck",
+        "length": "100",
+        "width": "50",
+        "height": "30",
+        "cost": "10"
+    },
+    {
+        "name": "Van",
+        "length": "70",
+        "width": "25",
+        "height": "15",
+        "cost": "8"
+    }
+]
