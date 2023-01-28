@@ -1,0 +1,69 @@
+table {
+    width: 100%;
+    margin: 40px 0;
+    border-radius: 10px;
+    border-collapse: collapse;
+    overflow: hidden;
+    box-shadow: 0 7px 29px 0 hsl(240deg 5% 41% / 20%);
+}
+
+table thead tr {
+    background-color: var(--green-color);
+    color: #fff;
+}
+
+table thead tr th:not(:last-of-type) {
+    border-right: 1px solid #fff;
+}
+
+table tr th,
+table tr td {
+    padding: 10px 15px;
+    margin: 0;
+}
+
+table tr th {
+    font-size: 18px;
+    font-weight: 500;
+    text-align: left;
+}
+
+table tbody tr {
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+
+table tbody tr td.hidden {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    cursor: auto;
+    justify-content: space-between;
+}
+
+table tbody tr td.hidden .left {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    width: 45%;
+}
+
+table tbody tr td.hidden .right {
+    width: 45%;
+}
+
+table tbody tr:not(:last-of-type) {
+    border-bottom: 1px solid #ccc;
+}
+
+table tbody tr:nth-of-type(2n) {
+    background-color: #eee;
+    border-left: 1px solid #eee;
+}
+
+table tbody tr td:not(:last-of-type) {
+    border-right: 1px solid #ccc;
+}

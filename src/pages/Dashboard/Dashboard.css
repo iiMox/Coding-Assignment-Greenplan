@@ -1,0 +1,39 @@
+.dashboard {
+    padding: 80px 0;
+}
+
+.dashboard ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    border-bottom: 2px solid var(--grey-color);
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.8;
+    padding: 0;
+    position: relative;
+}
+
+.dashboard ul li {
+    padding: 10px 40px;
+    color: var(--grey-text-color);
+    cursor: pointer;
+    width: 150px;
+    transition: all 0.2s ease-in-out;
+    text-align: center;
+}
+
+.dashboard ul li.active {
+    color: var(--green-color);
+}
+
+.dashboard ul .underline {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 150px;
+    height: 2px;
+    background-color: var(--green-color);
+    transition: all 0.2s ease-in-out;
+}

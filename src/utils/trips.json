@@ -3,12 +3,42 @@
         "name": "Trip 1",
         "delivery count": "20",
         "date": "25 September 2022",
-        "status": "Done"
+        "status": "Done",
+        "extra": {
+            "Trip 1 Start": "Bonn",
+            "Trip 1 End": "Cologne",
+            "Total Trip 1 Time": "3 Hours",
+            "Total Parcel Delivered": "20",
+            "Total Weight of the Parcels": "200 Kgs",
+            "startCoords": [
+                50.7374,
+                7.0982
+            ],
+            "endCoords": [
+                50.9375,
+                6.9603
+            ]
+        }
     },
     {
         "name": "Trip 2",
         "delivery count": "100",
         "date": "26 September 2022",
-        "status": "Failed"
+        "status": "Failed",
+        "extra": {
+            "Trip 2 Start": "Frankfurt",
+            "Trip 2 End": "Berlin",
+            "Total Trip 2 Time": "10 Hours",
+            "Total Parcel Delivered": "20",
+            "Total Weight of the Parcels": "200 Kgs",
+            "startCoords": [
+                50.7374,
+                7.0982
+            ],
+            "endCoords": [
+                50.9375,
+                6.9603
+            ]
+        }
     }
 ]

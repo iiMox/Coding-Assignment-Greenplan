@@ -29,12 +29,12 @@
     padding: 0 12.5%;
 }
 
-.login form h1 {
+/* .login form h1 {
     font-size: 30px;
     font-weight: 500;
     margin-bottom: 40px;
     color: #5e737a;
-}
+} */
 
 .login form input {
     width: 100%;

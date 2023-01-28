@@ -37,47 +37,49 @@ const Login = () => {
 
     return (
         <div className='login'>
-            <img src={Green} alt='Green' />
-            <div className='separator'></div>
-            <form
-                onSubmit={(e) => {
-                    if (
-                        credentials.username !== "" &&
-                        credentials.password !== ""
-                    ) {
-                        e.preventDefault();
-                        onSubmit();
-                    }
-                }}
-            >
-                <h1>Login</h1>
-                <input
-                    type='text'
-                    placeholder='Username'
-                    required
-                    onChange={(e) => {
-                        setCredentials({
-                            ...credentials,
-                            username: e.target.value,
-                        });
+            <div className='container'>
+                <img src={Green} alt='Green' />
+                <div className='separator'></div>
+                <form
+                    onSubmit={(e) => {
+                        if (
+                            credentials.username !== "" &&
+                            credentials.password !== ""
+                        ) {
+                            e.preventDefault();
+                            onSubmit();
+                        }
                     }}
-                />
-                <input
-                    type='password'
-                    placeholder='Password'
-                    onChange={(e) => {
-                        setCredentials({
-                            ...credentials,
-                            password: e.target.value,
-                        });
-                    }}
-                    required
-                />
-                <div className='error'>
-                    <img src={Cross} alt='Cross' /> <span ref={errorRef}></span>
-                </div>
-                <button type='submit'>Login</button>
-            </form>
+                >
+                    <input
+                        type='text'
+                        placeholder='Username'
+                        required
+                        onChange={(e) => {
+                            setCredentials({
+                                ...credentials,
+                                username: e.target.value,
+                            });
+                        }}
+                    />
+                    <input
+                        type='password'
+                        placeholder='Password'
+                        onChange={(e) => {
+                            setCredentials({
+                                ...credentials,
+                                password: e.target.value,
+                            });
+                        }}
+                        required
+                    />
+                    <div className='error'>
+                        <img src={Cross} alt='Cross' />{" "}
+                        <span ref={errorRef}></span>
+                    </div>
+                    <button type='submit'>Login</button>
+                </form>
+            </div>
         </div>
     );
 };
