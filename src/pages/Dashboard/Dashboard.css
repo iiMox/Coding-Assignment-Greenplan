@@ -37,3 +37,13 @@
     background-color: var(--green-color);
     transition: all 0.2s ease-in-out;
 }
+
+@media (max-width: 575.98px) {
+    .dashboard ul li {
+        padding: 10px 35px;
+    }
+
+    .dashboard ul .underline {
+        width: 140px;
+    }
+}

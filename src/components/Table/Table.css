@@ -46,6 +46,7 @@
     justify-content: space-around;
     transition: all 0.2s ease-in-out;
     padding: 0;
+    overflow: hidden;
 }
 
 .table .tbody .tr .td.hidden .left {
@@ -76,4 +77,97 @@
 
 .table .tbody .tr .td:has(+ .td.hidden) {
     border-right: 0;
+}
+
+@media (max-width: 575.98px) {
+    .table {
+        overflow-x: scroll;
+    }
+
+    .table .tr {
+        width: fit-content !important;
+    }
+
+    .table .tbody .tr {
+        position: relative;
+        flex-wrap: nowrap;
+    }
+
+    .table .tr .th,
+    .table .tr .td {
+        width: 150px;
+        flex: none !important;
+    }
+
+    .table .tbody .tr .td.hidden {
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+
+    .table .tbody .tr .td.hidden .left {
+        width: 100%;
+        padding-top: 40px;
+    }
+
+    .table .tbody .tr .td.hidden .right {
+        width: 100%;
+        padding-bottom: 40px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .table .tbody .tr .td.hidden {
+        flex-direction: column;
+    }
+
+    .table .tbody .tr .td.hidden .left {
+        width: 100%;
+        padding-top: 40px;
+    }
+
+    .table .tbody .tr .td.hidden .right {
+        width: 100%;
+        padding-bottom: 40px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .table .tbody .tr .td.hidden {
+        flex-direction: column;
+    }
+
+    .table .tbody .tr .td.hidden .left {
+        width: 100%;
+        padding-top: 40px;
+    }
+
+    .table .tbody .tr .td.hidden .right {
+        width: 100%;
+        padding-bottom: 40px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .table .tbody .tr .td.hidden .left {
+        width: 30%;
+    }
+
+    .table .tbody .tr .td.hidden .right {
+        width: 65%;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .table .tbody .tr .td.hidden .left {
+        width: 35%;
+    }
+
+    .table .tbody .tr .td.hidden .right {
+        width: 60%;
+    }
+}
+
+@media (min-width: 1400px) and (max-width: 1599px) {
 }

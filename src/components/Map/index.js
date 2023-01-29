@@ -5,7 +5,6 @@ import "./Map.css";
 import marker from "../../images/marker.png";
 
 const MapWrapper = ({ coords }) => {
-    console.log(coords[0]);
     return (
         <Map
             mapboxAccessToken='pk.eyJ1Ijoibmltb3UiLCJhIjoiY2xkZ3VhbWcwMDJteTNxbWt5OWF5bTAxZiJ9.Y7J-oF3Si03fJxW-H0zuVw'
@@ -15,7 +14,10 @@ const MapWrapper = ({ coords }) => {
                 zoom: 5,
             }}
             style={{
-                width: "calc(100% - 40px)",
+                width: `${
+                    window.innerWidth <= 991.98 ? "90%" : "calc(100% - 40px)"
+                }`,
+                margin: "0 auto",
                 height: "450px",
             }}
             mapStyle='mapbox://styles/mapbox/streets-v9'
