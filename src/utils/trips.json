@@ -11,12 +11,12 @@
             "Total Parcel Delivered": "20",
             "Total Weight of the Parcels": "200 Kgs",
             "startCoords": [
-                50.7374,
-                7.0982
+                50.732712,
+                7.096310
             ],
             "endCoords": [
-                50.9375,
-                6.9603
+                50.940529,
+                6.959910
             ]
         }
     },
@@ -32,12 +32,12 @@
             "Total Parcel Delivered": "20",
             "Total Weight of the Parcels": "200 Kgs",
             "startCoords": [
-                50.7374,
-                7.0982
+                50.1106444,
+                8.6820917
             ],
             "endCoords": [
-                50.9375,
-                6.9603
+                52.520008,
+                13.404954
             ]
         }
     }
