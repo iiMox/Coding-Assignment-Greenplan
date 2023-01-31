@@ -54,26 +54,33 @@ const Table = ({ head, body, type }) => {
                             }}
                             key={index}
                             onClick={(e) => {
-                                if (type === "trip") onTripRowClick(e.target);
+                                if (
+                                    type === "trip" &&
+                                    !e.target.classList.contains(
+                                        "mapboxgl-canvas"
+                                    ) &&
+                                    !e.target.classList.contains("left") &&
+                                    !e.target.classList.contains("hidden")
+                                )
+                                    onTripRowClick(e.target);
                             }}
                         >
                             {Object.keys(elt).map((key, i) => {
-                                if (key !== "extra")
-                                    return (
-                                        <div
-                                            className='td'
-                                            key={i + 1}
-                                            style={{
-                                                flex: `${
-                                                    type === "trip"
-                                                        ? "25%"
-                                                        : "20%"
-                                                }`,
-                                            }}
-                                        >
-                                            {elt[key]}
-                                        </div>
-                                    );
+                                return key !== "extra" ? (
+                                    <div
+                                        className='td'
+                                        key={i + 1}
+                                        style={{
+                                            flex: `${
+                                                type === "trip" ? "25%" : "20%"
+                                            }`,
+                                        }}
+                                    >
+                                        {elt[key]}
+                                    </div>
+                                ) : (
+                                    ""
+                                );
                             })}
                             {type === "trip" ? (
                                 <div
