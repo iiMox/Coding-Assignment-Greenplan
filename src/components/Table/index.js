@@ -10,7 +10,7 @@ const Table = ({ head, body, type }) => {
         const rightContentHeight = hiddenData.lastChild.firstChild.offsetHeight;
 
         if (hiddenData.style.maxHeight === "0px")
-            if (window.innerWidth <= 575.98) {
+            if (window.innerWidth <= 767.98) {
                 row.style.marginBottom =
                     leftContentHeight + rightContentHeight + 40 + "px";
                 hiddenData.style.maxHeight =
@@ -19,7 +19,10 @@ const Table = ({ head, body, type }) => {
                 hiddenData.style.maxHeight =
                     leftContentHeight + rightContentHeight + 40 + "px";
             else hiddenData.style.maxHeight = rightContentHeight + "px";
-        else hiddenData.style.maxHeight = "0px";
+        else {
+            hiddenData.style.maxHeight = "0px";
+            row.style.marginBottom = "0px";
+        }
     };
 
     return (

@@ -1,8 +1,14 @@
 import { Map, Marker } from "react-map-gl";
+
 import "mapbox-gl/dist/mapbox-gl.css";
 
 import "./Map.css";
 import marker from "../../images/marker.png";
+
+import mapboxgl from "mapbox-gl";
+/* eslint import/no-webpack-loader-syntax: off */
+mapboxgl.workerClass =
+    require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
 
 const MapWrapper = ({ coords }) => {
     return (

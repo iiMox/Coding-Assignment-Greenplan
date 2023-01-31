@@ -95,7 +95,7 @@
 
     .table .tr .th,
     .table .tr .td {
-        width: 150px;
+        width: 200px;
         flex: none !important;
     }
 
@@ -118,8 +118,30 @@
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
+    .table {
+        overflow-x: scroll;
+    }
+
+    .table .tr {
+        width: fit-content !important;
+    }
+
+    .table .tbody .tr {
+        position: relative;
+        flex-wrap: nowrap;
+    }
+
+    .table .tr .th,
+    .table .tr .td {
+        width: 200px;
+        flex: none !important;
+    }
+
     .table .tbody .tr .td.hidden {
         flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
     }
 
     .table .tbody .tr .td.hidden .left {
